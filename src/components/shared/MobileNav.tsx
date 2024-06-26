@@ -38,7 +38,7 @@ const MobileNav = () => {
                                     {
                                         navLinks.map((link) => {
                                             const isActive = link.route === pathname
-                                            return (<li key={link.route} className={`${isActive && 'gradient-text'} flex p-16 whitespace-nowrap text-dark-700`}>
+                                            return (<li key={link.route} className={`${isActive ? 'gradient-text': ''} flex-center px-4 whitespace-nowrap text-dark-700`}>
                                                 <Link href={link.route} className='sidebar-link cursor-pointer'>
                                                     {link.label}
                                                 </Link>
