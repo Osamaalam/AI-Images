@@ -20,11 +20,12 @@ export const connectToDatabase = async () => {
 
   if(!MONGODB_URL) throw new Error('Missing MONGODB_URL');
 
-  cached.promise = 
-    cached.promise || 
-    mongoose.connect(MONGODB_URL, { 
+  cached.promise = cached.promise ||
+    mongoose.connect(MONGODB_URL, {
       dbName: 'unbounded_imagination', bufferCommands: false 
     })
+
+    console.log("Here program flow went")
 
   cached.conn = await cached.promise;
 
