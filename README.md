@@ -1,4 +1,4 @@
-## Introduction
+## Introduction to Master Imagery
 
 This repository showcases a full-stack AI Software as a Service (SaaS) platform built using modern development tools and technologies. It provides a comprehensive guide to creating an advanced AI-based image transformation application. The platform leverages various tools to offer a seamless user experience and robust functionality.
 
