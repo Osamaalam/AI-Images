@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Square+Peg&display=swap');
+
+.montserrat-normal {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.square-peg-regular {
+  font-family: "Square Peg", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -76,7 +100,7 @@
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100
+  @apply flex-center min-h-screen w-full bg-purple-400
 }
 
 .root {
@@ -110,7 +134,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[48px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[48px];
   }
 
   /* 36 */
@@ -144,7 +168,7 @@
 
   /* 16 */
   .p-16-semibold {
-    @apply font-semibold text-[16px] leading-[140%];
+    @apply montserrat-normal text-[16px] leading-[140%];
   }
 
   .p-16-medium {
@@ -179,7 +203,7 @@
   }
 
   .input-field {
-    @apply rounded-[16px] border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
+    @apply rounded-[16px] border-2 border-[#626480] shadow-xl shadow-purple-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[40px] md:h-[44px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
   }
 
   .search-field {
@@ -191,7 +215,7 @@
   }
 
   .select-field {
-    @apply w-full border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 rounded-[16px] h-[50px] md:h-[54px] text-dark-600 p-16-semibold disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
+    @apply w-full border-2 shadow-xl border-[#626480]  shadow-purple-200/15 rounded-[16px] h-[40px] md:h-[44px] text-dark-600 p-16-semibold disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
   }
 
   .select-trigger {
@@ -220,11 +244,11 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+    @apply sm:flex-center hidden h-64 flex-col gap-4 rounded-[20px] bg-cover bg-no-repeat p-5;
   }
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-semibold max-w-[500px] justify-center flex text-[#3a894b];
   }
 
   /* Credits Page */
@@ -285,11 +309,11 @@
 
   /* MediaUploader Component */
   .media-uploader_cldImage {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit min-h-72 w-full rounded-[10px] border-slate-400 border-dashed bg-purple-100/20 object-cover p-2;
   }
 
   .media-uploader_cta {
-    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
+    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-slate-600 border-dashed bg-purple-100/20 ;
   }
 
   .media-uploader_cta-image {
@@ -302,7 +326,7 @@
   }
 
   .header-nav_elements {
-    @apply mt-8 flex w-full flex-col items-start gap-5;
+    @apply mt-8 flex w-full flex-col justify-center items-start gap-2;
   }
 
   /* Search Component */
@@ -312,27 +336,27 @@
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply hidden h-screen w-72 bg-slate-200 p-5 shadow-purple-200/50 lg:flex;
   }
 
   .sidebar-logo {
-    @apply flex items-center gap-2 md:py-2;
+    @apply flex items-center md:py-2 bg-white;
   }
 
   .sidebar-nav {
-    @apply h-full flex-col justify-between md:flex md:gap-4;
+    @apply h-full flex-col justify-between md:flex;
   }
 
   .sidebar-nav_elements {
-    @apply hidden w-full flex-col items-start gap-2 md:flex;
+    @apply hidden w-full flex-col items-start gap-1 md:flex;
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    @apply flex-center rounded-lg p-16-semibold w-full whitespace-nowrap bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
   }
 
   .sidebar-link {
-    @apply p-16-semibold flex size-full gap-4 p-4;
+    @apply flex gap-2 p-4;
   }
 
   /* TransformationForm Component */
@@ -350,7 +374,7 @@
   }
 
   .transformed-image {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit min-h-72 w-full rounded-[10px] border-2 border-slate-600 border-dashed bg-purple-100/20 object-cover p-2;
   }
 
   .transforming-loader {
@@ -358,7 +382,7 @@
   }
 
   .transformed-placeholder {
-    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
+    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px]  bg-purple-100/20 border-2 border-slate-600 border-dashed;
   }
 }
 

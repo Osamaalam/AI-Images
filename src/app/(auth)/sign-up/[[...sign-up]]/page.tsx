@@ -3,7 +3,7 @@ import React from 'react'
 
 const SignUpPage = () => {
   return (
-    <SignUp />
+    <SignUp appearance={{ elements: { logoBox: { height: '100px', width: '315px' } } }}/>
   )
 }
 

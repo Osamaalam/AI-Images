@@ -179,20 +179,20 @@ const TransformationForm = ({ action, data = null, type, creditBalance, userId }
     }
 
     useEffect(() => {
-        if(image && (type === 'restore' || type === 'removeBackground')) {
-          setNewTransformation(transformationType.config)
+        if (image && (type === 'restore' || type === 'removeBackground')) {
+            setNewTransformation(transformationType.config)
         }
-      }, [image, transformationType.config, type])
+    }, [image, transformationType.config, type])
 
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                {creditBalance<Math.abs(creditFee) && <InsufficientCreditsModal/>}
+                {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
                 <CustomField
                     control={form.control}
                     name="title"
-                    formLabel="title"
-                    className="w-full"
+                    formLabel="Title"
+                    className="w-full square-peg-regular"
                     render={({ field }) => <Input {...field} className="input-field" />}
                 />
 
@@ -201,7 +201,7 @@ const TransformationForm = ({ action, data = null, type, creditBalance, userId }
                         control={form.control}
                         name="aspectRatio"
                         formLabel="Aspect Ratio"
-                        className="w-full"
+                        className="w-full square-peg-regular"
                         render={({ field }) => (
                             <Select
                                 onValueChange={(value) => onSelectFieldHandler(value, field.onChange)}

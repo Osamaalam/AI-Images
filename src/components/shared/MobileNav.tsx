@@ -21,7 +21,7 @@ const MobileNav = () => {
     return (
         <header className='header'>
             <Link href="/" className='flex items-center gap-2 md:py-2'>
-                <Image src="/assets/images/logo-text.svg" alt="logo" height={28} width={180} />
+                <Image src="/assets/images/download.svg" alt="logo" height={28} width={180} />
             </Link>
 
             <nav className='flex gap-2'>
@@ -29,17 +29,17 @@ const MobileNav = () => {
                     <UserButton afterSignOutUrl='/sign-in' showName />
                     <Sheet>
                         <SheetTrigger>
-                            <Image src="/assets/icons/menu.svg" alt="menu" height={32} width={32} className="cursor-pointer" />
+                            <Image src="/assets/icons/menu.svg" alt="menu" height={32} width={32} className="cursor-pointer " />
                         </SheetTrigger>
                         <SheetContent className="sheet-content sm:w-64">
                             <>
-                                <Image src="/assets/images/logo-text.svg" alt="logo" height={23} width={152} />
+                                <Image src="/assets/images/download.svg" alt="logo" height={23} width={152} className='shadow-md p-3' />
                                 <ul className='header-nav_elements'>
                                     {
                                         navLinks.map((link) => {
                                             const isActive = link.route === pathname
-                                            return (<li key={link.route} className={`${isActive ? 'gradient-text': ''} flex-center px-4 whitespace-nowrap text-dark-700`}>
-                                                <Link href={link.route} className='sidebar-link cursor-pointer'>
+                                            return (<li key={link.route} className={`${isActive ? 'gradient-text' : ''} flex-center whitespace-nowrap text-dark-700 w-full`}>
+                                                <Link href={link.route} className='sidebar-link flex-center cursor-pointer montserrat-normal w-full'>
                                                     {link.label}
                                                 </Link>
                                             </li>)
