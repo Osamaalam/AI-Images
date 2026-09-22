@@ -1,4 +1,4 @@
-Updated: 2026-09-05
+Updated: 2026-09-22
 
 ## Introduction to Master Imagery
 
